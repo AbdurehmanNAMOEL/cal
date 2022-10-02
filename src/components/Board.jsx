@@ -10,43 +10,29 @@ const Board = () => {
     // let array2=['Delete','/','C','x','-','+','=']
 
 const handleEvaluation =(e)=>{
-      if(btnValue===''){
+      
+    if(btnValue===''){
          btnValue='0'
       }
+      
       if(topValue.includes('+')){
-        let value =parseInt(topValue)+parseInt(btnValue)
-    
-        setTopValue(value.toString().concat(e.target.value))
-        setValue('')
-     
+         handleAddition(e)
+
       }else if(topValue.includes('*')){
         if(btnValue===''){
             btnValue='1'
         }
-        let value =parseInt(topValue)*parseInt(btnValue)
-
-        setTopValue(value.toString().concat(e.target.value))
-        setValue('')
+        handleMultiplication(e)
      
       }else if(topValue.includes('/')){
         if(btnValue===''||btnValue==='0'){
             setValue("Cannot be divided by zero");
-        }else
-        {
-            let value =parseInt(topValue)/parseInt(btnValue)
-            setTopValue(value.toString().concat(e.target.value))
-            setValue('')
-        }
-      }
-      else if(topValue.includes('-')){
-            let value =parseInt(topValue)-parseInt(btnValue)
-            setTopValue(value.toString().concat(e.target.value))
-            setValue('')
-      }
-       else if(topValue.includes('%')){
-            let value =parseInt(topValue) % parseInt(btnValue)
-            setTopValue(value.toString().concat(e.target.value))
-            setValue('')
+        }else handleDivision(e)
+        
+      }else if(topValue.includes('-')){
+            handleSubtraction(e)
+      }else if(topValue.includes('%')){
+            handleModule(e)
       }
       else{   
       setTopValue(btnValue+=e.target.value)
@@ -70,6 +56,45 @@ const handleDelete=()=>{
     }
     setValue(newString)       
   
+}
+
+const handleParseInt=(value)=>{
+    return parseInt(value)
+}
+
+
+const handleAddition =(e)=>{
+
+        let value =handleParseInt(topValue) + handleParseInt(btnValue)
+        setTopValue(value.toString().concat(e.target.value))
+        setValue('')
+}
+
+const handleSubtraction =(e)=>{
+    
+        let value =handleParseInt(topValue) - handleParseInt(btnValue)
+        setTopValue(value.toString().concat(e.target.value))
+        setValue('')
+}
+
+const handleMultiplication =(e)=>{
+    
+        let value =handleParseInt(topValue) * handleParseInt(btnValue)
+        setTopValue(value.toString().concat(e.target.value))
+        setValue('')
+}
+
+const handleDivision =(e)=>{
+    
+        let value =handleParseInt(topValue) / handleParseInt(btnValue)
+        setTopValue(value.toString().concat(e.target.value))
+        setValue('')
+}
+
+const handleModule =(e)=>{
+        let value =handleParseInt(topValue) % handleParseInt(btnValue)
+        setTopValue(value.toString().concat(e.target.value))
+        setValue('')
 }
 
   return (
