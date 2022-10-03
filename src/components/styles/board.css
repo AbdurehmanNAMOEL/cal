@@ -57,6 +57,7 @@
  .board-container{
     width: 78%;
     height: 500px;
+    margin-top: -150px;
   
 }
 .value-display{
@@ -87,6 +88,6 @@
 }   
 
 .bottom{
-    font-size: 16px;
+    font-size: 14px;
 }
 }
