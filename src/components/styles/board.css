@@ -1,6 +1,6 @@
 .board-container{
-    width: 390px;
-    height: 500px;
+    width: 80%;
+    height: 600px;
     background-color: #121212;
     display: grid;
     grid-template-columns: 100%;
@@ -14,28 +14,29 @@
 .btn-container{
     background-color: #121212;
     display: grid;
-    grid-template-columns: 300px 80px;
+    grid-template-columns: 80% 20%;
     grid-template-rows: 100%;
     
 }
 .left-container{
     display: grid;
-    grid-template-columns: 80px 80px 80px;
-    grid-template-rows: 50px 50px 50px 50px 50px 50px;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 70px 70px 70px 70px 70px 70px;
     grid-gap: 10px;
     margin-top: 20px;
+    margin-left: 10px;
 
 }
 .right-container{
 
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 40px 40px 40px 40px 40px 40px;
+    grid-template-columns: 95%;
+    grid-template-rows: 70px 70px 70px 70px 70px 70px;
     grid-gap: 10px;
-     margin-top: 20px;
-    
-   
+    margin-top: 20px;
+    margin-left: -50px;
 }
+
 .top,.bottom{
     width:100%;
     height: 50%;
@@ -51,4 +52,37 @@
     font-size: xx-large;
     color: #121212;
  
+}
+@media only screen and (max-width:540px){
+ .board-container{
+    width: 78%;
+    height: 500px;
+  
+}
+.value-display{
+    background-color: #ada9a962;
+    font-weight: bolder;
+
+}
+.btn-container{
+   
+    grid-template-columns: 70% 25%;
+    grid-template-rows: 100%;
+    
+}
+.left-container{
+  
+    grid-template-columns: 28% 28% 28%;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px;
+   
+
+}
+.right-container{
+
+  
+    grid-template-columns: 100%;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px;
+ 
+    margin-left: 10px;
+}   
 }
