@@ -55,7 +55,7 @@
 }
 @media only screen and (max-width:540px){
  .board-container{
-    width: 78%;
+    width: 88%;
     height: 500px;
     margin-top: -80px;
   
@@ -73,7 +73,7 @@
 }
 .left-container{
   
-    grid-template-columns: 28% 28% 28%;
+    grid-template-columns: 31% 31% 31%;
     grid-template-rows: 50px 50px 50px 50px 50px 50px;
    
 
@@ -83,8 +83,7 @@
   
     grid-template-columns: 100%;
     grid-template-rows: 50px 50px 50px 50px 50px 50px;
- 
-    margin-left: 10px;
+    margin-left: 15px;
 }   
 
 .bottom{
