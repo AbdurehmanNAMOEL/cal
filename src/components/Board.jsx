@@ -101,7 +101,6 @@ const handleRatio =()=>{
         setValue('can not be divided by zero ')
        }else{
         let value =1/ handleParseFloat(btnValue)
-        alert(value)
         setValue(value.toString())
         
       }
