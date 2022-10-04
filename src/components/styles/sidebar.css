@@ -1,7 +1,7 @@
 .side-bar-container{
     width: 100px;
     height: 300px;
-    background-color: rgb(28, 31, 28);
+    background-color: white;
     position: fixed;
     z-index: 400;
     margin-left: 10px;
@@ -14,6 +14,7 @@
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+    border: solid 2px #12121241;
 }
 
 ul{
@@ -31,10 +32,16 @@ li{
     align-items: center;
     margin-left: -10px;
     cursor: pointer;
+    display: flex;
+    gap: 8px;
 }
 .link{
     text-decoration: none;
-    color: white;
+    color: #121212;
+    
+}
+#edit{
+    gap: 20px;
 }
 
 .link:hover{
@@ -44,4 +51,23 @@ li{
     -moz-transition: all 0.7s;
     -ms-transition: all 0.7s;
     -o-transition: all 0.7s;
+}
+
+.icon{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+}
+li:hover{
+    background-color: orange;
+    transition: all 0.7s;
+    border-radius: 10px;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }

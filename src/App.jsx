@@ -4,17 +4,18 @@ import './App.css';
 import Board from './components/Board';
 import GraphPlotter from './components/graph-cal/GraphPlotter';
 import GraphPlotterHome from './components/graph-cal/GraphPlotterHome';
-import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+import { BrowserRouter as Router,Routes,Route, useNavigate } from 'react-router-dom';
 import SideBar from './components/SideBar';
-let initial =''
-let finalValue=0
-let final2=1
+import AngleConverterHome from './components/angle/AngleConverterHome';
+import TempHome from './components/Temperature/TempHome';
+import CurencyHome from './components/currency/CurencyHome';
+
 function App() {
  
     const [width,setWidth]=useState(330)
     const [height,setHeight]=useState(330)
     let windowWidth=window.innerWidth
-
+   
 const checkWindowSize=()=>{
     
     if(windowWidth<=540){
@@ -30,7 +31,7 @@ const checkWindowSize=()=>{
 useEffect(()=>{
  checkWindowSize()
  console.log(window.innerHeight);
- 
+
 },[])
   
   return (
@@ -40,6 +41,9 @@ useEffect(()=>{
         <Routes>
           <Route exact path ={'/'} element={<Board/>}/>
           <Route exact path ={'/graph'} element={<GraphPlotterHome width={width} height={height}/>}/>
+          <Route exact path ={'/angle'} element={<AngleConverterHome/>}/>
+          <Route exact path ={'/temp'} element={<TempHome/>}/>
+          <Route exact path ={'/currency'} element={<CurencyHome/>}/>
         </Routes>
       </Router>
  
