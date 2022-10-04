@@ -5,7 +5,7 @@ import GraphButtons from './GraphButtons'
 import GraphPlotter from './GraphPlotter'
 const GraphPlotterHome = ({height,width}) => {
     let array=['x','(',')','*',"^",'+','-','/','7','8','9','4','5','6','3','2','1','0','.','sin','cos','log','ln','Draw']
-  const [btnValue,setValue] = useState(' ')
+  let [btnValue,setValue] = useState(' ')
   const [equation,setEquation] = useState('0')
   const handleEquation=()=>{
       setEquation(btnValue)
@@ -24,7 +24,7 @@ const GraphPlotterHome = ({height,width}) => {
             />
         </div>
         <div className="input">
-            <input type={'text'} className="input-display" value={btnValue}></input>
+            <input type={'text'} className="input-display" onChange={(e)=>setValue(e.target.value)} value={btnValue}></input>
             <div className="btn-container">
                 <button className='button' onClick={handleCancel}>C</button>
                 {
