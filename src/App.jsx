@@ -16,8 +16,8 @@ function App() {
 const checkWindowSize=()=>{
     
     if(windowWidth<=540){
-        setWidth(330)
-        setHeight(330)
+        setWidth(300)
+        setHeight(300)
     }else if(windowWidth>540){
        setWidth(600)
        setHeight(600)
