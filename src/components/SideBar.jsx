@@ -9,13 +9,13 @@ import CurrencyIcon from '../images/currency.svg'
 const SideBar = () => {
   return (
     <div className='side-bar-container'>
-      <ul>
-        <li> <img className='icon' src={CalculatorIcon} alt="" /> <Link className='link' to={'/'}>Standard</Link></li>
-        <li id='edit'> <img  className='icon' src={GraphIcon} alt="" /><Link className='link' to={'/graph'}>Graph</Link></li>
-        <li id='edit'> <img  className='icon' src={AngleIcon} alt="" /><Link className='link' to={'/angle'}>Angle</Link></li>
-        <li> <img className='icon' src={CurrencyIcon} alt="" /><Link className='link' to={'currency'}>Currency</Link></li>
-        <li id='edit'> <img className='icon' src={TempIcon} alt="" /><Link className='link' to={'temp'}>Temp</Link></li>
-      </ul>
+     
+        <Link className='box1' to={'/'}> <img className='icon' src={CalculatorIcon} alt="" /> </Link>
+        <Link className='box2' to ={'/graph'} id='edit'> <img  className='icon' src={GraphIcon} alt="" /></Link>
+        <Link className='box3' to ={'/angle'} id='edit'> <img  className='icon' src={AngleIcon} alt="" /></Link>
+        <Link className='box4' to ={'/currency'}> <img className='icon' src={CurrencyIcon} alt="" /></Link>
+        <Link className='box5' to ={'/temp'} id='edit'> <img className='icon' src={TempIcon} alt="" /></Link>
+     
     </div>
   )
 }

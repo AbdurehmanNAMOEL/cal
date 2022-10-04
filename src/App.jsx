@@ -9,6 +9,7 @@ import SideBar from './components/SideBar';
 import AngleConverterHome from './components/angle/AngleConverterHome';
 import TempHome from './components/Temperature/TempHome';
 import CurencyHome from './components/currency/CurencyHome';
+import cal from './images/calculator.svg'
 
 function App() {
  
@@ -50,8 +51,6 @@ useEffect(()=>{
 
     
 
-  
-   
     </div>
   );
 }

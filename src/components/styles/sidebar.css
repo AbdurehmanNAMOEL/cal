@@ -1,5 +1,5 @@
 .side-bar-container{
-    width: 100px;
+    width: 60px;
     height: 300px;
     background-color: white;
     position: fixed;
@@ -8,6 +8,7 @@
     margin-top: 70px;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     border-radius: 20px;
     -webkit-border-radius: 20px;
@@ -17,57 +18,116 @@
     border: solid 2px #12121241;
 }
 
-ul{
-    list-style: none;
-    position: absolute;
-    margin-left: -33px;
-    gap: 20px;
-    
-}
-li{
-    width: 100px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: -10px;
-    cursor: pointer;
-    display: flex;
-    gap: 8px;
-}
+
 .link{
     text-decoration: none;
     color: #121212;
+    display: none;
     
 }
-#edit{
-    gap: 20px;
-}
 
-.link:hover{
+/* .link:hover{
     text-decoration: underline;
     transition: all 0.7s;
     -webkit-transition: all 0.7s;
     -moz-transition: all 0.7s;
     -ms-transition: all 0.7s;
     -o-transition: all 0.7s;
-}
+} */
 
 .icon{
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     background-color: white;
+ 
 }
-li:hover{
+img::after{
+    content: ' ';
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    z-index: 200;
+}
+.icon:hover{
     background-color: orange;
     transition: all 0.7s;
-    border-radius: 10px;
     -webkit-transition: all 0.7s;
     -moz-transition: all 0.7s;
     -ms-transition: all 0.7s;
     -o-transition: all 0.7s;
+}
+
+.box1,
+.box2,
+.box3,
+.box4,
+.box5{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.box1::before{
+    content: 'Standard';
+}
+
+.box2::before{
+    content: 'Graph';
+}
+
+.box3::before{
+    content: 'Angle';
+}
+.box4::before{
+    content: 'Currency';
+}
+.box5::before{
+    content: 'Temperature';
+}
+
+.box1::before,
+.box2::before,
+.box3::before,
+.box4::before,
+.box5::before
+{
+    width: 0%;
+    height: 30px;
+    background-color: orange;
+    border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    display: none;
+    font-size: 10px;
+    font-weight: bolder;
+    z-index: 100;
+    
+}
+.box1:hover::before,
+.box2:hover::before,
+.box3:hover::before,
+.box4:hover::before,
+.box5:hover::before{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.7s;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -ms-transition: all 0.7s;
+  -o-transition: all 0.7s;
+}
+img{
+    position: absolute;
 }
