@@ -131,3 +131,23 @@ img::after{
 img{
     position: absolute;
 }
+
+@media only screen and (max-width:540px){
+
+    .side-bar-container{
+    width: 300px;
+    height: 60px;
+    flex-direction: row;
+     margin-top: 10px;    
+}
+
+.box1:hover::before,
+.box2:hover::before,
+.box3:hover::before,
+.box4:hover::before,
+.box5:hover::before{
+  
+  width: 20%;
+  
+}
+}
