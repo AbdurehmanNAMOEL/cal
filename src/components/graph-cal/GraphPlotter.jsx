@@ -8,7 +8,7 @@ const GraphPlotter = ({equation,height,width}) => {
    
 useEffect(()=>{
  
- console.log(window.innerHeight);
+ 
  functionPlot({
         target:'#plotter',
         width:width,

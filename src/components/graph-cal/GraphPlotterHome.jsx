@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import SideBar from '../SideBar'
 import '../styles/graphHome.css'
 import GraphButtons from './GraphButtons'
 import GraphPlotter from './GraphPlotter'
@@ -16,7 +17,11 @@ const GraphPlotterHome = ({height,width}) => {
   return (
     <div className='graph-home'>
         <div className="graph">
-            <GraphPlotter equation={equation} height={height} width={width}/>
+            <GraphPlotter 
+            equation={equation} 
+            height={height}
+            width={width}
+            />
         </div>
         <div className="input">
             <input type={'text'} className="input-display" value={btnValue}></input>

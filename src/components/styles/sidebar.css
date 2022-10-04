@@ -1,0 +1,47 @@
+.side-bar-container{
+    width: 100px;
+    height: 300px;
+    background-color: rgb(28, 31, 28);
+    position: fixed;
+    z-index: 400;
+    margin-left: 10px;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+ul{
+    list-style: none;
+    position: absolute;
+    margin-left: -33px;
+    gap: 20px;
+    
+}
+li{
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    cursor: pointer;
+}
+.link{
+    text-decoration: none;
+    color: white;
+}
+
+.link:hover{
+    text-decoration: underline;
+    transition: all 0.7s;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -o-transition: all 0.7s;
+}

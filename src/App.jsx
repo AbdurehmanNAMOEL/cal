@@ -4,6 +4,8 @@ import './App.css';
 import Board from './components/Board';
 import GraphPlotter from './components/graph-cal/GraphPlotter';
 import GraphPlotterHome from './components/graph-cal/GraphPlotterHome';
+import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+import SideBar from './components/SideBar';
 let initial =''
 let finalValue=0
 let final2=1
@@ -29,16 +31,23 @@ useEffect(()=>{
  checkWindowSize()
  console.log(window.innerHeight);
  
-},[window.innerWidth])
+},[])
   
   return (
     <div className="App">
+      <Router>
+        <SideBar/>
+        <Routes>
+          <Route exact path ={'/'} element={<Board/>}/>
+          <Route exact path ={'/graph'} element={<GraphPlotterHome width={width} height={height}/>}/>
+        </Routes>
+      </Router>
+ 
+
+    
+
+  
    
-
-
-    {/* <Board/> */}
-
-    <GraphPlotterHome width={width} height={height}/>
     </div>
   );
 }
