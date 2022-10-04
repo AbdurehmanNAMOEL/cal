@@ -1,13 +1,13 @@
 .board-container{
-    width: 80%;
+    width: 60%;
     height: 600px;
     background-color: #121212;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 100px 400px;
-    margin-left: 15%;
+    margin-left: 20%;
     margin-top: 20px;
-    overflow-y: hidden;
+    position: absolute;
 }
 .value-display{
     background-color: #ada9a962;
@@ -19,19 +19,20 @@
     display: grid;
     grid-template-columns: 80% 80%;
     grid-template-rows: 100%;
- 
+  
     
 }
 .left-container{
     display: grid;
     width: 60%;
     height: 100%;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: 40% 40% 40%;
     grid-template-rows: 70px 70px 70px 70px 70px 70px;
     grid-gap: 10px;
     margin-top: 20px;
     margin-left: 10px;
     position: absolute;
+   margin-left: 20px;
 
 
 }
@@ -43,7 +44,7 @@
     grid-template-rows: 70px 70px 70px 70px 70px 70px;
     grid-gap: 10px;
     margin-top: 20px;
-    margin-left: 800px;
+    margin-left: 630px;
     position: absolute;
 
 }
@@ -58,6 +59,7 @@
     margin-left: -20px;
     font-size: larger;
     color: #121212ab;
+   
 }
 
 .bottom{
@@ -70,7 +72,7 @@
     height: 600px;
     width: 95%;
     margin-left:2.5% ;
-    margin-top: 130px;
+    margin-top: 150px;
 
  }
 
