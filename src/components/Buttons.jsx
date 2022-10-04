@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles/button.css'
 
-const Buttons = ({value,topValue,handleNegation,btnValue,setValue}) => {
+const Buttons = ({value,handleNegation,btnValue,setValue}) => {
   return (
     <button 
     className='button' 

@@ -16,8 +16,8 @@ const Board = () => {
 const handleEvaluation =(e)=>{
       
    if(btnValue==='') btnValue='0'
-   if(topValue.includes('+'))handleAddition(e)
-   else if(topValue.includes('*'))handleMultiplication(e)
+   if(topValue.includes('+')) handleAddition(e)
+   else if(topValue.includes('*')) handleMultiplication(e)
    else if(topValue.includes('/')){
         if(btnValue===''||btnValue==='0')setValue("Cannot be divided by zero");
         else handleDivision(e)

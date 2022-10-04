@@ -1,0 +1,17 @@
+#plotter{
+    width: 600px;
+    height: 600px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+@media only screen and (max-width:540px){
+    #plotter{
+        width: 350px;
+         height: 400px;
+      margin-top: 400px;
+    }
+}
