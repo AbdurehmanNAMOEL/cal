@@ -10,11 +10,13 @@ import AngleConverterHome from './components/angle/AngleConverterHome';
 import TempHome from './components/Temperature/TempHome';
 import CurencyHome from './components/currency/CurencyHome';
 import cal from './images/calculator.svg'
+let count =0
 
 function App() {
  
     const [width,setWidth]=useState(330)
     const [height,setHeight]=useState(330)
+    const [testingArray,setNewArray]=useState([])
     let windowWidth=window.innerWidth
    
 const checkWindowSize=()=>{
@@ -34,7 +36,12 @@ useEffect(()=>{
  console.log(window.innerHeight);
 
 },[])
-  
+
+const handleButton=()=>{
+  setNewArray([...testingArray,count])
+  console.log(testingArray)
+  count++
+}
   return (
     <div className="App">
       <Router>
@@ -49,8 +56,15 @@ useEffect(()=>{
       </Router>
  
 
+     {/* Testing part */}
     
+    {/* <div className="testing-block">
+     {testingArray.map(item=>
+      <input type={'text'} id={item}/>)}    
+    </div>
 
+
+    <button onClick={handleButton}>+</button> */}
     </div>
   );
 }

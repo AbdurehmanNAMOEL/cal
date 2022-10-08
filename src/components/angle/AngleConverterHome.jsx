@@ -66,14 +66,20 @@ const AngleConverterHome = () => {
   }
   },[selector1,selector2,btnValue])
 
-  const handleDelete=()=>{
+const handleDelete=()=>{
     let value = btnValue.split('')
-    for(let i=0;i<value.length-1;i++){
-               newString+=value[i]
+    if(value.length===1){
+      setValue('')
+    }else if(value.length>1){
+      value.pop()
+      for(let i=0;i<value.length;i++){
+        newString+=value[i]
+      }  
+     setValue(newString) 
+     newString=''  
     }
-    setValue(newString)       
-  
 }
+
 
 const handleCancel =()=>{
   setValue('')

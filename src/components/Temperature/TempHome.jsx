@@ -14,7 +14,7 @@ const TempHome = () => {
     return parseFloat(btnValue)
   }
 
-  console.log((handleParseFloat()+273.115).toString());
+
   
   const convertCelsiusToKelvin=()=>{
       setConvertedValue((handleParseFloat()+273.115).toString())
@@ -47,31 +47,33 @@ const TempHome = () => {
   }
   
   useEffect(()=>{
+    
   if(btnValue!==''){  
-    if(selector1==='Celsius' && selector2==='Kelvin'){
-        convertCelsiusToKelvin()
-    }else if(selector1==='kelvin' && selector2==='Celsius'){
-        convertKelvinToCelsius()
-    }else if(selector1==='Celsius' && selector2==='Fahrenheit'){
-        convertCelsiusToFahrenheit()
-    }else if(selector1==='Fahrenheit' && selector2==='Celsius'){
-        convertFahrenheitToCelsius()
-    }else if(selector1==='Kelvin' && selector2==='Fahrenheit'){
-        convertKelvinToFahrenheit()
-    }else if(selector1==='Fahrenheit' && selector2==='Kelvin'){
-        convertFahrenheitToKelvin()
-    }
+    
+    if(selector1==='Celsius' && selector2==='Kelvin') convertCelsiusToKelvin()
+    else if(selector1==='kelvin' && selector2==='Celsius') convertKelvinToCelsius()
+    else if(selector1==='Celsius' && selector2==='Fahrenheit') convertCelsiusToFahrenheit()
+    else if(selector1==='Fahrenheit' && selector2==='Celsius') convertFahrenheitToCelsius()
+    else if(selector1==='Kelvin' && selector2==='Fahrenheit') convertKelvinToFahrenheit()
+    else if(selector1==='Fahrenheit' && selector2==='Kelvin') convertFahrenheitToKelvin()
+
   }
   },[selector1,selector2,btnValue])
 
-  const handleDelete=()=>{
+ const handleDelete=()=>{
     let value = btnValue.split('')
-    for(let i=0;i<value.length-1;i++){
-               newString+=value[i]
+    if(value.length===1){
+      setValue('')
+    }else if(value.length>1){
+      value.pop()
+      for(let i=0;i<value.length;i++){
+        newString+=value[i]
+      }  
+     setValue(newString) 
+     newString=''  
     }
-    setValue(newString)       
-  
 }
+
 
 const handleCancel =()=>{
   setValue('')

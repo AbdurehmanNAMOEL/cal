@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Buttons from './Buttons'
 import './styles/board.css'
 let newString=''
-let value=0
+var value=0
+let count =1
 
 const Board = () => {
 
@@ -40,13 +41,19 @@ const handleCancel=()=>{
 
 const handleDelete=()=>{
     let value = btnValue.split('')
-
-    for(let i=0;i<btnValue.length-1;i++){
-               newString+=value[i]
+    if(value.length===1){
+      setValue('')
+    }else if(value.length>1){
+      value.pop()
+      for(let i=0;i<value.length;i++){
+        newString+=value[i]
+      }  
+     setValue(newString) 
+     newString=''  
     }
-    setValue(newString)       
-  
 }
+
+useEffect(()=>{},[btnValue])
 
 
 const handleParseFloat=(value)=>{
@@ -140,6 +147,7 @@ const handleNegation =()=>{
 }
 
   return (
+
 
 <div className='board-container'>
  

@@ -4,13 +4,13 @@
     background-color: #121212;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 100px 400px;
+    grid-template-rows: 120px 380px;
     margin-left: 20%;
     margin-top: 20px;
     position: absolute;
 }
 .value-display{
-    background-color: #ada9a962;
+    background-color: white;
     font-weight: bolder;
 
 }

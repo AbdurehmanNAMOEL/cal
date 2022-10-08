@@ -2,6 +2,7 @@
  
   width: 100%;
   height: 100vh;
+  background-color: #121212d0;
  overflow-x: hidden;
 }
 
@@ -14,4 +15,17 @@ button{
 }
 button:hover{
   background-color: #333;
+}
+
+.testing-block{
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 20px 20px 20px 20px;
+  grid-template-rows: 20px 20px 20px 20px;
+  grid-gap: 5px;
+  place-content: center;
+
 }

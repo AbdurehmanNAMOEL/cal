@@ -7,6 +7,7 @@ const GraphPlotterHome = ({height,width}) => {
     let array=['x','(',')','*',"^",'+','-','/','7','8','9','4','5','6','3','2','1','0','.','sin','cos','log','ln','Draw']
   let [btnValue,setValue] = useState(' ')
   const [equation,setEquation] = useState('0')
+
   const handleEquation=()=>{
       setEquation(btnValue)
   }
